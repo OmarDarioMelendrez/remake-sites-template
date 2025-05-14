@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Multi-site Template with Next.js
 
-## Getting Started
+This is a template for creating multiple websites with Next.js, designed to be easily adaptable to different industries and needs.
 
-First, run the development server:
+## Features
+
+- Developed with Next.js 14 and App Router
+- Responsive design with Tailwind CSS
+- Reusable components
+- TypeScript typing
+- Easy customization of colors and styles
+- SEO optimized
+
+## Project Structure
+
+```
+remake-template/
+├── public/            # Static files
+├── src/
+│   ├── app/           # Application routes
+│   │   ├── page.tsx   # Main page
+│   │   └── layout.tsx # Main layout
+│   ├── components/    # Reusable components
+│   │   ├── ui/        # Basic UI components
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── ...
+│   ├── lib/           # Utilities and functions
+│   └── constants/     # Constants and configuration
+```
+
+## How to Use
+
+### Installation
+
+1. Clone this repository:
+
+```bash
+git clone [REPOSITORY_URL]
+```
+
+2. Install dependencies:
+
+```bash
+cd remake-template
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### Colors and Theme
 
-## Learn More
+You can customize colors and theme by modifying the CSS variables in `src/app/globals.css`.
 
-To learn more about Next.js, take a look at the following resources:
+#### Content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Modify texts and images in the components according to your client's needs.
+2. Update routes in the Header and Footer components.
+3. Customize specific components for each industry.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Deployment
 
-## Deploy on Vercel
+To build the production version:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Main Components
+
+- **Header**: Responsive navigation bar
+- **Footer**: Footer with contact information and links
+- **Hero**: Main section of the home page
+- **WhatsAppButton**: Floating button for WhatsApp contact
+
+## License
+
+This project is under the MIT license.
