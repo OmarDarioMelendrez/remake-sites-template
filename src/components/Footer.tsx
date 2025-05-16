@@ -1,76 +1,55 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-[#8B4513]/90 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Nombre de la Empresa</h3>
-            <p className="mb-4">
-              Brindando servicios de calidad desde 2010. Comprometidos con la
-              excelencia y la satisfacción del cliente.
+            <h3 className="font-heading font-bold text-xl mb-4">
+              MOLIENDA PERRICONE
+            </h3>
+            <p className="text-white/80 mb-4">
+              Más de 50 años de trayectoria ininterrumpida en el mercado de la
+              minería, especializados en la molienda de minerales.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                <Facebook size={24} />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                <Instagram size={24} />
-                <span className="sr-only">Instagram</span>
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                <Twitter size={24} />
-                <span className="sr-only">Twitter</span>
-              </a>
+            <div className="flex space-x-4 mt-4">
+              {/* Social media icons could go here */}
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+            <h3 className="font-heading font-bold text-xl mb-4">
+              Enlaces Rápidos
+            </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="hover:text-primary transition-colors">
+                <Link
+                  href="/"
+                  className="text-white/80 hover:text-white transition-colors"
+                >
                   Inicio
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/quienes-somos"
-                  className="hover:text-primary transition-colors"
+                  href="/productos"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
-                  Quiénes Somos
+                  Productos
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/servicios"
-                  className="hover:text-primary transition-colors"
+                  href="/contacto"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
-                  Servicios
+                  Contacto
                 </Link>
               </li>
             </ul>
@@ -78,33 +57,40 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contacto</h3>
-            <address className="not-italic">
-              <p className="mb-2">Av. Principal 123</p>
-              <p className="mb-2">Ciudad, CP 12345</p>
-              <p className="mb-2">
-                <a
-                  href="tel:+123456789"
-                  className="hover:text-primary transition-colors"
-                >
-                  +12 345 6789
-                </a>
-              </p>
-              <p>
-                <a
-                  href="mailto:info@empresa.com"
-                  className="hover:text-primary transition-colors"
-                >
-                  info@empresa.com
-                </a>
-              </p>
-            </address>
+            <h3 className="font-heading font-bold text-xl mb-4">Contacto</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <MapPin className="h-5 w-5 mr-2 mt-0.5 text-white/60" />
+                <span>
+                  Riobamba 1618, Don Torcuato, Buenos Aires, Argentina
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Phone className="h-5 w-5 mr-2 text-white/60" />
+                <span>Tel: 4748-1904</span>
+              </li>
+              <li className="flex items-center">
+                <Phone className="h-5 w-5 mr-2 text-white/60" />
+                <span>WhatsApp: 11 3292 9169</span>
+              </li>
+              <li className="flex items-center">
+                <Mail className="h-5 w-5 mr-2 text-white/60" />
+                <span>moliendaperricone@hotmail.com</span>
+              </li>
+              <li className="flex items-start mt-4">
+                <Clock className="h-5 w-5 mr-2 mt-0.5 text-white/60" />
+                <div>
+                  <p>Lunes a viernes: 7:30 a 11:30 y 13:00 a 17:00</p>
+                  <p>Sábados: 7:30 a 11:30</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+        <div className="border-t border-white/20 mt-8 pt-6 text-center text-white/60">
           <p>
-            &copy; {currentYear} Nombre de la Empresa. Todos los derechos
+            © {new Date().getFullYear()} Molienda Perricone. Todos los derechos
             reservados.
           </p>
         </div>
