@@ -21,13 +21,13 @@ const HomePage = () => {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-[#8B4513]/60" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#8B4513]/90 mb-6 font-heading">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-heading drop-shadow-lg">
             MOLIENDA PERRICONE
           </h1>
-          <p className="text-xl md:text-2xl text-[#8B4513]/80 max-w-3xl mx-auto mb-8">
+          <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-8 drop-shadow">
             Más de 50 años de excelencia en la molienda de minerales
           </p>
           <div className="flex justify-center space-x-4">
@@ -45,7 +45,7 @@ const HomePage = () => {
             </Link>
           </div>
           <div className="mt-16 animate-bounce">
-            <ArrowDown className="mx-auto h-8 w-8 text-[#8B4513]/70" />
+            <ArrowDown className="mx-auto h-8 w-8 text-white/80 drop-shadow" />
           </div>
         </div>
       </section>

@@ -21,7 +21,14 @@ const ContactPage = () => {
                 Teléfono
               </h3>
               <p className="text-[#8B4513]/80">4748-1904</p>
-              <p className="text-[#8B4513]/80">WhatsApp: 11 3292 9169</p>
+              <a
+                href="https://wa.me/5491132929169"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#8B4513]/80 hover:text-[#8B4513] transition-colors underline"
+              >
+                WhatsApp: 11 3292 9169
+              </a>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-sm">
               <Mail className="h-10 w-10 text-[#8B4513]/70 mx-auto mb-4" />
