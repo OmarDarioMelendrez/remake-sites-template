@@ -11,9 +11,8 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const product = Object.values(productsData).find(
-    (p) => p.slug === params.slug
-  );
+  const { slug } = await params;
+  const product = Object.values(productsData).find((p) => p.slug === slug);
 
   if (!product) {
     return {
