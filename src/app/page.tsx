@@ -2,6 +2,10 @@
 
 import { ArrowDown, Phone, Mail, Clock } from "lucide-react";
 import Link from "next/link";
+import { productsData } from "@/data/products";
+import Image from "next/image";
+
+const defaultImage = productsData.granitos.image;
 
 const HomePage = () => {
   return (
@@ -95,12 +99,14 @@ const HomePage = () => {
                 href={`/productos/${product.toLowerCase()}`}
                 className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden group"
               >
-                <div className="h-40 bg-[#8B4513]/20 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-[#8B4513]/30 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">
-                      {product.charAt(0)}
-                    </span>
-                  </div>
+                <div className="relative w-full h-40 bg-[#8B4513]/20">
+                  <Image
+                    src={defaultImage}
+                    alt={product}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-[#8B4513]/90 mb-2 group-hover:text-[#8B4513] transition-colors">
