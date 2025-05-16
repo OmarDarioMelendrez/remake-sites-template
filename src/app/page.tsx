@@ -9,9 +9,20 @@ const defaultImage = productsData.granitos.image;
 
 const HomePage = () => {
   return (
-    <main className="bg-[#F5F0EB]">
+    <main>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-[#8B4513]/10 to-[#8B4513]/5 py-16 md:py-24">
+      <section className="relative py-16 md:py-24">
+        <div className="absolute inset-0 w-full h-full -z-10">
+          <Image
+            src="https://images.unsplash.com/photo-1585749864755-f1adb4ec8e29?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Fondo molienda granito"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-[#8B4513]/60" />
+        </div>
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#8B4513]/90 mb-6 font-heading">
             MOLIENDA PERRICONE
@@ -40,7 +51,7 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16" id="about">
+      <section className="bg-[#F5F0EB] py-16" id="about">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-[#8B4513]/90 text-center mb-8">
@@ -79,7 +90,7 @@ const HomePage = () => {
       </section>
 
       {/* Products Preview Section */}
-      <section className="bg-[#8B4513]/5 py-16">
+      <section className="bg-[#F5F0EB] bg-[#8B4513]/5 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#8B4513]/90 text-center mb-8">
             Nuestros Productos
@@ -132,7 +143,7 @@ const HomePage = () => {
       </section>
 
       {/* Contact Preview */}
-      <section className="py-16">
+      <section className="bg-[#F5F0EB] py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-[#8B4513]/90 mb-4">
